@@ -8,7 +8,6 @@ class InputTask extends Component{
         }
     }
 
-
     render(){
         return(
             <div className="inputBox">

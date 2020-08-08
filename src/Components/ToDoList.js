@@ -15,12 +15,12 @@ class ToDoList extends Component{
             <div className = "todosBox">
                <ul>
                 {this.props.allTasks.map(task => {
-                    const { id, toDo, isDone, buttonName } = task;
+                    const { id, title, completed} = task;
                         return (
-                        <li key={id} className ={isDone ? "crossed" : " "}>
+                        <li key={id} className ={completed ? "crossed" : " "}>
                            
                             <input type="checkbox" onClick={()=>this.props.onDone(id)} className="checkBox"/>
-                             {toDo}
+                             {title}
                              <FaRegTrashAlt onClick={()=>this.props.onDelete(id)} className="delete"/>
                         </li> 
                     );
